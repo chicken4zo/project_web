@@ -150,15 +150,15 @@ function getWeather(position){
 
             const comment = document.querySelector('#comment');
 
-            if(icon_split === ('01' || '02' || '03')){
+            if(icon_split === '01' || icon_split === '02' || icon_split === '03'){
                 comment.innerText = "거래하기 좋은 날입니다.";
-            }else if(icon_split === ('09' || '10')){
+            }else if(icon_split === '09' || icon_split === '10'){
                 comment.innerText = "비가오니 우산을 챙기세요."
-            }else if(icon_split === ('04' || '50')){
+            }else if(icon_split === '04' || icon_split === '50'){
                 comment.innerText = "구름이 끼어 흐립니다."
-            }else if(icon_split === ('13')) {
+            }else if(icon_split === '13') {
                 comment.innerText = "눈길 조심하세요."
-            }else if(icon_split === ('11')) {
+            }else if(icon_split === '11') {
                 comment.innerText = "벼락 조심하세요."
             }else {
                 comment.innerText = "위치를 찾을 수 없습니다."
