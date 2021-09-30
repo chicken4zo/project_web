@@ -126,7 +126,9 @@
 }
 
 .commentList h2{
+    clear: both;
     font-size: 1.1rem;
+    margin-top: 35px;
 }
 
 .commentList p{
@@ -136,9 +138,17 @@
 }
 
 .commentList h4{
+    float: left;
     font-size: 0.7rem;
     font-weight: normal;
     margin-top: 5px !important;
+}
+
+.commentList input{
+    float: right;
+    font-size: 0.7rem;
+    border: none;
+    background-color: transparent;
 }
 
 .commentWrite_Wrap{
@@ -146,7 +156,7 @@
     border: 2px solid #dcdce3;
     border-radius: 6px;
     padding :10px 10px;
-    margin: 30px 0 10px;
+    margin: 45px 0 10px;
 
 }
 
