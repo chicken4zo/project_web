@@ -10,12 +10,16 @@ img
 }
 .form-group {
     background-color: white;
-    width: 400px;
-    height: 550px;
+    /*width: 400px;*/
+    /*height: 550px;*/
     border-radius: 60px;
     margin: 0 auto;
     text-align: center;
     position: relative;
+}
+
+#id{
+    margin-left: 72px;
 }
 
 .form-group form label
@@ -24,16 +28,36 @@ img
     text-align:left;
     padding:25px 0 10px 0;
     font-weight:bold;
-    margin-left:55px
+    margin-left:457px
 }
 
-.form-group input
+.input
 {
     width:300px;
     height:40px;
     border-radius:20px;
     border:1px solid lightgrey;
     background-color:lightgrey;
+}
+
+.login_input{
+    padding: 15px;
+
+}
+
+.title h1{
+    font-family: 'Jua', sans-serif;
+    color: #8B425A;
+}
+
+#btn1{
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+}
+.btn_wrap {
+    display: block !important;
 }
 
 .btn .button

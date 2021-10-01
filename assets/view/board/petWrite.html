@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>고민하지말구, 고구마켓</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/productWrite.css">
+    <link rel="shortcut icon" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--    mvp.css css 작업할 때 지워줘야함-->
+    <!--    <link rel="stylesheet" href="https://unpkg.com/mvp.css">-->
+    <style>
+        .product-photo::before {
+            background-image: url("/assets/images/upload.png");
+        }
+    </style>
+    <!-- ckeditor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>
 <body>
+<form name="bbs" action="productWriteOk.board" method="POST" enctype="multipart/form-data">
+    <div class="product-group">
+        <section class="product-wrap">
+            <!--    <h2>글쓰기</h2>-->
+            <ul class="product-info">
 
+
+                <li class="info-title idAddress">
+                    <div class="info-detail">아이디</div>
+                    <input type="text" name="id" placeholder="!!!아이디 불러오기" class="write-title" readonly>
+                    <div class="info-detail">주소</div>
+                    <input type="text" name="address" placeholder="!!!주소 불러오기" class="write-title" readonly>
+                </li>
+
+                <li class="info-title">
+                    <div class="info-detail">제목</div>
+                    <input type="text" name="title" placeholder="제목을 입력하세요." class="write-title" value>
+                </li>
+
+                <li class="info-title">
+                    <div class="info-detail">이미지</div>
+
+                    <div class="product-photo">
+                        <input name="filename1" type="file" accept="image/jpeg, image/png, image/jpg" multiple>
+                    </div>
+                    <div class="product-photo">
+                        <input name="filename2" type="file" accept="image/jpeg, image/png, image/jpg" multiple>
+                    </div>
+                    <div class="product-photo">
+                        <input name="filename3" type="file" accept="image/jpeg, image/png, image/jpg" multiple>
+                    </div>
+                </li>
+
+                <li class="info-title">
+                    <div class="info-detail">
+                        내용
+                    </div>
+                    <textarea name="content" id="editor"></textarea>
+                    <script>
+                        //CKEditor5를 생성할 textarea 지정
+                        ClassicEditor
+                            .create(document.querySelector('#editor'))
+                            .catch(error => {
+                                console.error(error);
+                            });
+                    </script>
+                </li>
+            </ul>
+        </section>
+        <div class="product-btn">
+            <button type="submit" class="write-btn">등록하기</button>
+        </div>
+    </div>
+</form>
 </body>
 </html>

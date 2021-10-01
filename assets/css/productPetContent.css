@@ -1,12 +1,4 @@
-#body_wrap{
-    display: flex;
-    justify-content: center;
-}
-.wrapper{
-    width: 1200px;
-    height: 100%;
 
-}
 
 .container-fluid {
     width: 80% !important;
