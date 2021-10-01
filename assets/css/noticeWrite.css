@@ -1,0 +1,82 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notice-group {
+    display: block;
+    width: 1024px;
+    margin: auto;
+}
+.notice-wrap {
+    height:100%;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.notice-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.notice-info {
+    padding-top: 0.5rem;
+    width: 100vw;
+}
+
+
+ol, ul {
+    list-style: none;
+}
+.info-title {
+    width: 100%;
+    display: flex;
+    padding: 2rem 0px;
+    border-bottom: 1px solid rgb(220, 219, 228);
+}
+
+.info-detail {
+    /*font-family: 'Jua', sans-serif;*/
+    width: 12rem;
+    font-size: 22px;
+}
+
+.write-title {
+    border: 1px solid rgb(230, 229, 239);
+    height: 43px;
+    width: 70%;
+    padding: 0px 16px;
+
+}
+
+.write-btn {
+    color:#8B425A;
+    background-color: ghostwhite;
+    border:none;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.write-btn:hover {
+    background-color: rgba(139, 66, 90, 0.75);
+    box-shadow: 0px 15px 20px #b7b7b7;
+    color: #fff;
+    transform: translateY(-7px);
+}
+.ck.ck-editor {
+    width: 78% !important;
+}
+
+.ck.ck-editor__editable_inline>:last-child {
+    margin-bottom: var(--ck-spacing-large);
+    height: 500px;
+}
+
