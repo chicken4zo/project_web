@@ -51,6 +51,16 @@ table {
 }
 
 
+/* body */
+#body_wrap{
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+    width: 1200px;
+    height: 100%;
+
+}
 /* header */
 
 header {
@@ -292,6 +302,10 @@ header {
     letter-spacing: 1px;
 }
 
+#header_nav li:hover {
+    color:#8B425A;
+}
+
 #header_nav div{
     float: left;
 }
@@ -396,7 +410,7 @@ header {
     font-size: 1.7em;
     /* line-height: 2.9375em; */
     position: absolute;
-    left: 66%;
+    left: 62%;
     top: 87%;
     transform: translate(0, -50%);
 }
