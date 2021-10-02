@@ -2,6 +2,15 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+#body_wrap {
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    width: 1200px;
+    height: 100%;
+}
+
 .product-group {
     display: block;
     width: 1024px;
@@ -71,7 +80,7 @@ ol, ul {
 }
 
 .info-detail {
-    font-family: 'Jua', sans-serif;
+    /*font-family: 'Jua', sans-serif;*/
     width: 12rem;
     font-size: 22px;
 }
@@ -154,7 +163,7 @@ ol, ul {
 
 .sel__placeholder {
     display: block;
-    font-family: 'Jua', sans-serif !important;
+    /*font-family: 'Jua', sans-serif !important;*/
     font-family: 'Noto Sans KR', sans-serif !important;
     font-size: 2em;
     color: #495057;
@@ -206,7 +215,7 @@ ol, ul {
 
 .sel__box__options {
     display: list-item;
-    font-family: 'Jua', sans-serif !important;
+    /*font-family: 'Jua', sans-serif !important;*/
     font-family: 'Noto Sans KR', sans-serif !important;
     font-size: 1.6em;
     color: #495057;
