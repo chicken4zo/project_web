@@ -484,3 +484,18 @@ footer p {
     text-align: center;
 }
 
+.selectpicker {
+    color: rgb(73, 80, 87) !important;
+    /*border: 0 none !important;*/
+    /*background-color: #f3f3f3 !important;*/
+    /*border-color: rgb(73, 80, 87) !important;*/
+    border-radius: 10px 10px 0 10px;
+    border: 1px solid #858585 !important;
+    /*padding: 6px 20px !important;*/
+    /*box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;*/
+    /*box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1) !important;*/
+    cursor: pointer !important;
+    font-size: 0.85rem !important;
+    /*width: 100px;*/
+    /*height: 30px;*/
+}
