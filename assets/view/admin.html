@@ -2,9 +2,255 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>고민하지말구, 고구마켓</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/a959489452.js" crossorigin="anonymous"></script>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <!--weather icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css">
 
+</head>
+
+<body>
+<div id="body_wrap">
+    <div class="wrapper">
+        <!--header-->
+        <header>
+            <div id="header_wrap">
+                <img id="logo_img" src="/assets/images/gogu_logo.png" alt="logo" onclick="location.href='index.html';"
+                     style="cursor:pointer;">
+                <div id="header_search">
+                    <!--                    <%&#45;&#45;            <c:if test="${not empty id}">&#45;&#45;%>-->
+
+                    <select class="selectpicker" data-width="fit" onchange="location.href=this.value">
+                        <option value="" disabled style="color: black; font-size: 0.89rem">게시판</option>
+                        <option value="productList.board">상품</option>
+                        <option value="dailyList.board">일상</option>
+                        <option value="lostList.board">분실·실종</option>
+                        <option value="petList.board">반려동물</option>
+                    </select>
+
+                </div>
+                <div id="header_nav">
+                    <ul>
+                        <a href="#">
+                            <li>상품등록</li>
+                        </a>
+                        <a href="#">
+                            <li>우리동네</li>
+                        </a>
+                        <a href="#">
+                            <li>구마차트</li>
+                        </a>
+                        <a href="#">
+                            <li>공지사항</li>
+                        </a>
+                    </ul>
+                    <a href="#">
+                        <div class="register_btn">Register</div>
+                    </a>
+                    <a href="#">
+                        <div class="myPage_btn">My GUMA</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- weather -->
+        <article class="widget">
+            <div class="weatherIcon">
+                <div class="date">
+                    <h4 class="month" id="month"></h4>
+                    <h5 class="day" id="day"></h5>
+                </div>
+                <!--        <i class="wi wi-night-fog"></i>-->
+                <h1 id="temp" class="temperature">25&deg;</h1>
+            </div>
+            <div class="weatherData">
+                <h2 class="description">오늘,<br> 우리 동네는</h2>
+                <h3 class="city" id="comment">KR, Seochodong</h3>
+            </div>
+        </article>
+        <!--content-->
+        <div class="board-logo">
+            <h3>관리구마</h3>
+        </div>
+        <div class="search-form">
+            <input type="text" name="search" value="Search" onclick="this.value=''; ">
+            <button type="submit" class="btn btn-search fa fa-search"></button>
+        </div>
+                <div class="list">
+                    <table width="100%">
+                        <tr>
+                            <th width="4%"><div class="checks small"><input type="checkbox" onclick='selectAll(this)' id="check"><label for="check"></label></div></th>
+                            <th width="32%">아이디</th>
+                            <th width="32%">이름</th>
+                            <th width="32%">관리</th>
+                        </tr>
+                        <tr>
+                            <td><div class="checks small"><input type="checkbox" id="check1"><label for="check1"></label></div></td>
+                            <td>chicken</td>
+                            <td>김치킨</td>
+<!--                            <td><button type="button" class="card__btn"><i class="delete" data-title="Delete"></i></button></td>-->
+<!--                            <td><button type="button" class="card__btn">삭제</button></td>-->
+                            <td><button type="button" class="card__btn">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><div class="checks small"><input type="checkbox" id="check2"><label for="check2"></label></div></td>
+                            <td>4zo</td>
+                            <td>사조조</td>
+                            <td><button type="button" class="card__btn">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><div class="checks small"><input type="checkbox" id="check3"><label for="check3"></label></div></td>
+                            <td>4zo</td>
+                            <td>사조조</td>
+                            <td><button type="button" class="card__btn">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><div class="checks small"><input type="checkbox" id="check4"><label for="check4"></label></div></td>
+                            <td>4zo</td>
+                            <td>사조조</td>
+                            <td><button type="button" class="card__btn">상세</button></td>
+                        </tr>
+                    </table>
+                </div>
+        <button class="write-btn" onclick="location.href='lostForm.board'">회원삭제</button>
+
+        <div class="modal searchModal">
+            <div class="modal-content searchModalContent">
+            </div>
+        </div>
+        <div class="modal detailModal">
+            <div class="modal-content detailModalContent">
+            </div>
+        </div>
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1"><</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+</div>
+</div>
+</section>
+<footer class="footer">
+    <p>Copyright © 2021 chicken 4JO. All rights reserved.</p>
+</footer>
+</div>
+</div>
 </body>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.min.js"></script>
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--&lt;!&ndash;  DataTables.net Plugin, full documentation here: https://datatables.net/  &ndash;&gt;-->
+<!--<script src="../assets/js/plugins/jquery.dataTables.min.js"></script>-->
+</body>
+<!--bootstrp js-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!--image js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"></script>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/admin.js"></script>
+<!--&lt;!&ndash; 조별 &ndash;&gt;-->
+<!--&lt;!&ndash;   Core JS Files   &ndash;&gt;-->
+<!--<script src="/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>-->
+<!--<script src="/assets/js/core/popper.min.js" type="text/javascript"></script>-->
+<!--<script src="/assets/js/core/bootstrap.min.js" type="text/javascript"></script>-->
+<!--&lt;!&ndash;  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ &ndash;&gt;-->
+<!--<script src="/assets/js/plugins/bootstrap-switch.js"></script>-->
+<!--&lt;!&ndash;  Google Maps Plugin    &ndash;&gt;-->
+
+<!--&lt;!&ndash;  Chartist Plugin  &ndash;&gt;-->
+<!--<script src="/assets/js/plugins/chartist.min.js"></script>-->
+<!--&lt;!&ndash;  Notifications Plugin    &ndash;&gt;-->
+<!--<script src="/assets/js/plugins/bootstrap-notify.js"></script>-->
+<!--&lt;!&ndash; Control Center for Light Bootstrap Dashboard: scripts for the example pages etc &ndash;&gt;-->
+<!--<script src="/assets/js/light-bootstrap-dashboard.js?v=2.0.0 "-->
+<!--        type="text/javascript"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<!--<script src="/assets/js/script.js"></script>-->
+
+<script type="text/javascript">
+
+    $('#submit').click(function () {
+        const formData = $('#searchForm').serialize();
+        $.ajax(
+            {
+                url: "SearchMember",
+                type: "GET",
+                data: formData,
+                success: function (data) {
+                    $(".searchModalContent").html(data);
+                    $(".searchModal").fadeIn();
+                },
+                error: function (xhr) {
+                    console.log(xhr.status);
+                }
+            }
+        );
+    });
+
+    $('.modal-content').click(function () {
+        $('.searchModal').fadeOut(600);
+    });
+
+    $('.memberId').click(function () {
+        console.log($(this).text());
+        $.ajax(
+            {
+                url: "KoreaMemberDetail?id=" + $(this).text(),
+                type: "GET",
+                success: function (data) {
+                    $('.detailModalContent').html(data);
+                    $('.detailModal').fadeIn();
+                },
+                error: function (xhr) {
+                    console.log(xhr.status);
+                }
+            }
+        )
+    })
+
+
+</script>
 </html>

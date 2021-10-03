@@ -2,9 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>고민하지말구, 고구마켓</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/noticeContent.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/a959489452.js" crossorigin="anonymous"></script>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <!--weather icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css">
+
 </head>
 <body>
+<div id="body_wrap">
+    <div class="wrapper">
+        <!--header-->
+        <header>
+            <div id="header_wrap">
+                <img id="logo_img" src="/assets/images/gogu_logo.png" alt="logo" onclick="location.href='index.html';"
+                     style="cursor:pointer;">
+                <div id="header_search">
+                    <div class="sel sel--black-panther">
+                        <select name="select-profession" id="select-profession">
+                            <option value="" disabled>게시판</option>
+                            <option value="1">상품</option>
+                            <option value="2">일상</option>
+                            <option value="3">분실·실종</option>
+                            <option value="4">반려동물</option>
+                        </select>
+                    </div>
+                    <div class="search-form">
+                        <input type="text" name="search" value="Search" onclick="this.value=''; ">
+                        <button type="submit" class="btn btn-search fa fa-search"></button>
+                    </div>
+                </div>
+                <div id="header_nav">
+                    <ul>
+                        <a href="#">
+                            <li>상품등록</li>
+                        </a>
+                        <a href="#">
+                            <li>우리동네</li>
+                        </a>
+                        <a href="#">
+                            <li>구마차트</li>
+                        </a>
+                        <a href="#">
+                            <li>공지사항</li>
+                        </a>
+                    </ul>
+                    <a href="#">
+                        <div class="register_btn">Register</div>
+                    </a>
+                    <a href="#">
+                        <div class="myPage_btn">My GUMA</div>
+                    </a>
+                </div>
+            </div>
+        </header>
 
+        <!-- weather -->
+        <article class="widget">
+            <div class="weatherIcon">
+                <div class="date">
+                    <h4 class="month" id="month"></h4>
+                    <h5 class="day" id="day"></h5>
+                </div>
+                <!--        <i class="wi wi-night-fog"></i>-->
+                <h1 id="temp" class="temperature">25&deg;</h1>
+            </div>
+            <div class="weatherData">
+                <h2 class="description">오늘,<br> 우리 동네는</h2>
+                <h3 class="city" id="comment">KR, Seochodong</h3>
+            </div>
+
+        </article>
+
+        <!--content-->
+
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+<!--                            <h5 class="mb-4">공지사항</h5>-->
+                            <!--product details-->
+                            <div class="row">
+
+                                <div class="notice-content">
+                                    <h5 class="mb-0 mt-3">제목</h5>
+                                    <div class="detail_bar"></div>
+
+                                    <ul class="view_icon">
+                                        <li><i class="fas fa-eye"></i><span>100</span></li>
+                                        <li><i class="far fa-calendar-alt"></i><span>2021. 09. 30</span></li>
+                                    </ul>
+                                    <div class="content">
+                                        내용 The most beautiful curves of this swivel stool adds an elegant touch to any
+                                        environment Memory swivel seat returns to original seat position Comfortable
+                                        integrated layered chair seat cushion design Fully assembled! No assembly
+                                        required
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<footer>
+    <p>Copyright © 2021 chicken 4JO. All rights reserved.</p>
+</footer>
 </body>
+<!--bootstrp js-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!--image js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"></script>
+
+<script src="/assets/js/productContent.js"></script>
+<script src="/assets/js/main.js"></script>
+
 </html>
